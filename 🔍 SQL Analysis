@@ -1,0 +1,99 @@
+-- 1.Avg Property Size by City & Property Type
+SELECT city, 
+	   property_type,
+AVG(area_sqft) AS avg_property_size
+FROM Properties 
+GROUP BY city, property_type;
+
+-- 2.Top 5 Cities with Highest Property Sales
+SELECT p.city,
+	COUNT(s.sale_id) AS Total_Sales
+FROM Sales s 
+JOIN Properties p 
+ON s.property_id = p.property_id
+GROUP BY p.city 
+ORDER BY total_sales DESC LIMIT 5;
+
+-- 3.Agent Performance (Total Properties Sold)
+SELECT a.agent_id,
+	   a.agent_name,
+	   COUNT(s.sale_id) AS properties_sold
+FROM Agents a 
+JOIN Properties p 
+ON a.agent_id = p.agent_id
+JOIN Sales s 
+ON p.property_id = s.property_id
+GROUP BY a.agent_id, a.agent_name
+ORDER BY properties_sold DESC;
+
+-- 4.Monthly Trend of Avg Sale Price
+SELECT 
+    date_format(sale_date, '%Y-%m') AS Month,
+    AVG(sale_price) AS Avg_sale_price
+FROM Sales
+GROUP BY Month
+ORDER BY Month;
+
+-- 5.Customer Interest Analysis
+SELECT 
+    preferred_property_type,
+    COUNT(customer_id) AS Total_Customers
+FROM Customers
+GROUP BY preferred_property_type
+ORDER BY Total_Customers DESC;
+
+-- 6.Properties Listed but Not Sold
+SELECT *
+FROM Properties
+WHERE property_id NOT IN (
+    SELECT property_id FROM Sales
+);
+
+-- 7.Total Sales per Property Type
+SELECT 
+    p.property_type,
+    COUNT(s.sale_id) AS total_sales
+FROM Sales s
+JOIN Properties p ON s.property_id = p.property_id
+GROUP BY p.property_type;
+
+-- 8.Avg Area (Sqft) by Property Type
+SELECT 
+    Property_type,
+    AVG(area_sqft) AS Avg_Area
+FROM Properties
+GROUP BY Property_type;
+
+-- 9.Sales by Payment Method
+SELECT 
+    Payment_method,
+    COUNT(sale_id) AS Total_transactions,
+    SUM(sale_price) AS Total_revenue
+FROM Sales
+GROUP BY Payment_method;
+
+-- 10.Customer Budget Range Analysis
+SELECT 
+    COUNT(customer_id) AS Total_customers,
+    AVG(budget_min) AS Avg_min_budget,
+    AVG(budget_max) AS Avg_max_budget
+FROM Customers;
+
+-- 11.City-wise Sales Revenue
+SELECT 
+    p.city,
+    SUM(s.sale_price) AS Total_revenue
+FROM Sales s
+JOIN Properties p ON s.property_id = p.property_id
+GROUP BY p.city
+ORDER BY total_revenue DESC;
+
+-- 12.Top 5 Most Expensive Properties Sold
+SELECT 
+    p.property_name,
+    p.city,
+    s.sale_price
+FROM Sales s
+JOIN Properties p ON s.property_id = p.property_id
+ORDER BY s.sale_price DESC
+LIMIT 5;
