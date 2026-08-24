@@ -1,0 +1,28 @@
+📁 Project Structure
+
+Task-1-Interactive-Real-Estate-Pricing-Dashboard/
+│
+├── README.md
+├── dataset/
+│   ├── properties.csv
+│   ├── customers.csv
+│   ├── agents.csv
+│   ├── sales.csv
+│   └── schools.csv
+│
+├── sql/
+│   ├── create_database.sql
+│   ├── create_tables.sql
+│   ├── insert_data.sql
+│   └── analysis_queries.sql
+│
+├── powerbi/
+│   └── Real_Estate_Pricing_Dashboard.pbix
+│
+├── screenshots/
+│   ├── 01_database_tables.png
+│   ├── 02_data_model.png
+│   └── 03_dashboard_overview.png
+│
+└── documentation/
+    └── project_documentation.pdf
