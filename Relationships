@@ -1,0 +1,20 @@
+Relationships
+
+Customers
+    │
+    └── property_id
+            │
+            ▼
+        Properties
+            │
+            ├── property_id ─── Sales
+            │
+            └── school_id ─── Schools
+
+Agents
+    │
+    └── agent_id ───────────── Sales
+
+Customers
+    │
+    └── customer_id ────────── Sales
