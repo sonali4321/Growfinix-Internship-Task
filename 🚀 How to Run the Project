@@ -1,0 +1,72 @@
+🚀 How to Run the Project
+
+Step 1: Set Up the Database
+
+Open MySQL and run:
+
+create_database.sql
+create_tables.sql
+insert_data.sql
+
+Step 2: Analyze the Data
+
+Run:
+
+analysis_queries.sql
+
+to perform SQL-based analysis.
+
+Step 3: Connect Power BI to MySQL
+Open Microsoft Power BI Desktop.
+Select Get Data.
+Choose MySQL Database.
+Enter the database server details.
+Select the required tables.
+Load the data into Power BI.
+Step 4: Create Relationships
+
+Create relationships between:
+
+Properties and Schools
+Properties and Sales
+Customers and Sales
+Agents and Sales
+Step 5: Open the Dashboard
+
+Open:
+
+Real_Estate_Pricing_Dashboard.pbix
+
+and explore the interactive dashboard.
+
+📸 Dashboard Screenshots
+
+Add screenshots of:
+
+SQL Database Tables
+Power BI Data Model
+Dashboard Overview
+Neighborhood Price Analysis
+Property Price vs Square Footage
+School Proximity Analysis
+
+Interactive Map
+💡 Skills Demonstrated
+SQL
+MySQL
+Database Design
+Data Modeling
+Data Analysis
+Power BI
+DAX
+Data Visualization
+Interactive Dashboard Development
+Business Intelligence
+Geographic Data Analysis
+
+👩‍💻 Author
+Sonali Wagde
+Data Analyst | MIS Analyst | Business Analytics Enthusiast
+
+📌 Project Status
+✅ Completed
