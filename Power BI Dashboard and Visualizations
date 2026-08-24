@@ -1,0 +1,57 @@
+Power BI Dashboard
+The dashboard provides interactive insights into real estate property pricing.
+
+Key Performance Indicators
+Total Properties
+Average Property Price
+Highest Property Price
+Lowest Property Price
+Total Sales
+Average Square Footage
+
+
+📈 Dashboard Visualizations
+1. Average Property Price by Neighborhood
+
+A bar chart that compares average property prices across different neighborhoods.
+
+Business Value:
+Helps stakeholders identify high-value and affordable locations.
+
+2. Property Price vs Square Footage
+
+A scatter chart that analyzes the relationship between property size and price.
+
+Business Value:
+Helps understand whether larger properties generally have higher prices.
+
+3. School Proximity Analysis
+
+A chart comparing property prices based on their distance from schools.
+
+Business Value:
+Helps determine whether properties closer to schools have higher values.
+
+4. Interactive Property Map
+
+A map visualization displaying property locations using:
+
+Latitude
+Longitude
+Property Price
+Neighborhood
+
+Business Value:
+Allows stakeholders to explore geographical property pricing patterns.
+
+5. Property Type Analysis
+
+A chart comparing:
+
+Apartments
+Villas
+Independent Houses
+Other Property Types
+
+Business Value:
+Identifies which property categories have higher average prices.
