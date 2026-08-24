@@ -1,0 +1,25 @@
+DAX Measures
+
+Total Properties
+Total Properties =
+COUNT(Properties[property_id])
+
+Average Property Price
+Average Property Price =
+AVERAGE(Properties[price])
+
+Maximum Property Price
+Maximum Property Price =
+MAX(Properties[price])
+
+Minimum Property Price
+Minimum Property Price =
+MIN(Properties[price])
+
+Total Sales
+Total Sales =
+COUNT(Sales[sale_id])
+
+Average Square Footage
+Average Square Feet =
+AVERAGE(Properties[square_feet])
